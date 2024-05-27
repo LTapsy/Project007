@@ -681,3 +681,6 @@ opacity:0.6
 }
 
 
+.control img:nth-child(1){
+    margin:0 20px 0 0;
+}

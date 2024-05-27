@@ -84,6 +84,10 @@ $(document).ready(function() {
             '  <div class="product-cell id"><span class="cell-label">Description:</span>'+feature.Description+'</div>'+
             '  <div class="product-cell id"><span class="cell-label">Service Product:</span>'+feature.ServiceProduct+'</div>'+
             '  <div class="product-cell id"><span class="cell-label">Currency:</span>'+feature.Currency+'</div>'+
+            '  <div class="product-cell id control">'+
+            '  <a href="editFeatures"><img src="assets/pen.png" style="width:20px; height:20px;"></a>'+
+            '  <img src="assets/garbage.png" style="width:20px; height:20px;">'+
+            '  </div>'+
             '</div>'
         );
     });

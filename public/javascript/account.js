@@ -129,70 +129,21 @@ $(document).ready(function() {
         // Append a new row to the table body
         $('.products-area-wrapper.tableView').append(
             '<div class="products-row">'+
-            '  <div class="product-cell id" onClick="selectAccount('+account.ID+')"><span class="cell-label">ID:</span>'+account.ID+'</div>'+
-            '  <div class="product-cell id" onClick="selectAccount('+account.ID+')"><span class="cell-label">Account Name:</span>'+account.AccountName+'</div>'+
-            '  <div class="product-cell id" onClick="selectAccount('+account.ID+')"><span class="cell-label">Customer Type:</span>'+account.CustomerType+'</div>'+
-            '  <div class="product-cell id" onClick="selectAccount('+account.ID+')"><span class="cell-label">Term Type:</span>'+account.TermType+'</div>'+
-            '  <div class="product-cell id" onClick="selectAccount('+account.ID+')"><span class="cell-label">Billing Contact:</span>'+account.BillingContact+'</div>'+
-            '  <div class="product-cell id" onClick="selectAccount('+account.ID+')"><span class="cell-label">Account Currency:</span>'+account.AccountCurrency+'</div>'+
-            '  <div class="product-cell id" onClick="selectAccount('+account.ID+')"><span class="cell-label">Billing Address:</span>'+account.BillingAddress+'</div>'+
-            '  <div class="product-cell id" onClick="selectAccount('+account.ID+')"><span class="cell-label">CMMS Subdomain:</span>'+account.CMMS_Subdomain+'</div>'+
+            '  <div class="product-cell id"><span class="cell-label">ID:</span>'+account.ID+'</div>'+
+            '  <div class="product-cell id"><span class="cell-label">Account Name:</span>'+account.AccountName+'</div>'+
+            '  <div class="product-cell id"><span class="cell-label">Customer Type:</span>'+account.CustomerType+'</div>'+
+            '  <div class="product-cell id"><span class="cell-label">Term Type:</span>'+account.TermType+'</div>'+
+            '  <div class="product-cell id"><span class="cell-label">Billing Contact:</span>'+account.BillingContact+'</div>'+
+            '  <div class="product-cell id"><span class="cell-label">Account Currency:</span>'+account.AccountCurrency+'</div>'+
+            '  <div class="product-cell id"><span class="cell-label">Billing Address:</span>'+account.BillingAddress+'</div>'+
+            '  <div class="product-cell id"><span class="cell-label">CMMS Subdomain:</span>'+account.CMMS_Subdomain+'</div>'+
+            '  <div class="product-cell id control">'+
+            '  <a href="editaccount"><img src="assets/pen.png" style="width:20px; height:20px;"></a>'+
+            '  <img src="assets/garbage.png" style="width:20px; height:20px;">'+
+            '  </div>'+
             '</div>'
         );
     });
 });
 
 
-
-function selectAccount(id){
-    const selectedAccount = Account.find(account => account.ID === id);
-    
-    console.log(selectedAccount);
-    $('.popup-content').empty();
-    $('.popup-content').append(
-        '<span class="close" onclick="closePopup()">&times;</span>'+
-        '<h2>Edit Customer Information</h2>'+
-        '<button id="openPopupBtn">Edit Info</button>'+
-        '<div class="info-container">'+
-        '  <div>'+
-        '      <h3>AccountCurrency</h3>'+
-        '      <p>'+selectedAccount.AccountCurrency+'</p>'+
-        '      <h3>AccountName</h3>'+
-        '      <p>'+selectedAccount.AccountName+'</p>'+
-        '      <h3>BillingAddress</h3>'+
-        '      <p>'+selectedAccount.BillingAddress+'</p>'+
-        '      <h3>BillingContact</h3>'+
-        '      <p>'+selectedAccount.BillingContact+'</p>'+
-        '      <h3>BillingContactEmail</h3>'+
-        '      <p>'+selectedAccount.BillingContactEmail+'</p>'+
-        '  </div>'+
-        '  <div>'+
-        '      <h3>CMMS_Subdomain</h3>'+
-        '      <p>'+selectedAccount.CMMS_Subdomain+'</p>'+
-        '      <h3>CustomerType</h3>'+
-        '      <p>'+selectedAccount.CustomerType+'</p>'+
-        '      <h3>ID</h3>'+
-        '      <p>'+selectedAccount.ID+'</p>'+
-        '      <h3>TermType</h3>'+
-        '      <p>'+selectedAccount.TermType+'</p>'+
-        '      <h3>Type</h3>'+
-        '      <p>'+selectedAccount.Type+'</p>'+
-        '  </div>'+
-        '</div>'
-    );
-    openPopup()
-}
-
-
-
-
-
-// Function to open the popup
-function openPopup() {
-    document.getElementById("popup").style.display = "block";
-}
-
-// Function to close the popup
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}

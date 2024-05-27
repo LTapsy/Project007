@@ -117,6 +117,10 @@ $(document).ready(function() {
             '  <div class="product-cell id"><span class="cell-label">Status:</span>'+tenant.Status+'</div>'+
             '  <div class="product-cell id"><span class="cell-label">Admin Contact:</span>'+tenant.AdminContact+'</div>'+
             '  <div class="product-cell id"><span class="cell-label">Account Name:</span>'+tenant.Account+'</div>'+
+            '  <div class="product-cell id control">'+
+            '  <a href="edittenant"><img src="assets/pen.png" style="width:20px; height:20px;"></a>'+
+            '  <img src="assets/garbage.png" style="width:20px; height:20px;">'+
+            '  </div>'+
             '</div>'
         );
     });

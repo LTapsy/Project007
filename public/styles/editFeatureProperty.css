@@ -1,0 +1,32 @@
+.edit-form form{
+    display:flex;
+    flex-direction: column;
+    padding:10px 0 0 0;
+}
+
+.edit-form form label{
+    font-size: 14px;
+    color:white;
+    margin:20px 0 5px 0;
+}
+
+
+.edit-form form input,
+.edit-form form select{
+    width:500px;
+    padding:10px 10px;
+    border-radius:5px;
+    background:transparent;
+    border:1px solid white;
+    color:white;
+}
+
+.edit-form form select option{
+    color:black;
+}
+
+.edit-form form .submit-btn{
+    width:500px;
+    margin:30px 0 30px 0;
+    height:50px;
+}

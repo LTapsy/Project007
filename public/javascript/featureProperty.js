@@ -71,6 +71,10 @@ $(document).ready(function() {
             '  <div class="product-cell id"><span class="cell-label">Feature:</span>'+property.Feature+'</div>'+
             '  <div class="product-cell id"><span class="cell-label">Data Type:</span>'+property.DataType+'</div>'+
             '  <div class="product-cell id"><span class="cell-label">Currency:</span>'+property.Currency+'</div>'+
+            '  <div class="product-cell id control">'+
+            '  <a href="editfeaturedProperty"><img src="assets/pen.png" style="width:20px; height:20px;"></a>'+
+            '  <img src="assets/garbage.png" style="width:20px; height:20px;">'+
+            '  </div>'+
             '</div>'
         );
     });
